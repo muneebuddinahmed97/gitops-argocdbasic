@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: muneeb-todoapp-tomcat
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: muneeb-todoapp-tomcat
+  template:
+    metadata:
+      labels:
+        run: muneeb-todoapp-tomcat
+    spec:
+      containers:
+      - name: nginx
+        image: muneebuddinahmed/my-tomcat-app:latest
+        ports:
+          - containerPort: 8080s
+        imagePullPolicy: IfNotPresent
