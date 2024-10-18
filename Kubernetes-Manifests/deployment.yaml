@@ -4,7 +4,7 @@ metadata:
   name: muneeb-todoapp-tomcat
   namespace: muneeb-todoapp-tomcat
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       run: muneeb-todoapp-tomcat
